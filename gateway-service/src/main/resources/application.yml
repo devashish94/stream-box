@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: gateway-service
+  threads:
+    virtual:
+      enabled: true
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/users/**
+          filters:
+            - AuthFilter
+        - id: video-catalog-service
+          uri: lb://video-catalog-service
+          predicates:
+            - Path=/video/**
+        - id: node-auth-service
+          uri: lb://node-auth-service
+          predicates:
+            - Path=/auth/**, /oauth2/**, /login/**
+
+server:
+  port: 8090
+  error:
+    whitelabel:
+      enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG

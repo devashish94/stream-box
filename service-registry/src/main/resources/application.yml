@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: service-registry
+  threads:
+    virtual:
+      enabled: true
+
+server:
+  port: 8761
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false

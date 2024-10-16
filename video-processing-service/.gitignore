@@ -1,0 +1,80 @@
+#HELP.md
+#.gradle
+#build/
+#!gradle/wrapper/gradle-wrapper.jar
+#!**/src/main/**/build/
+#!**/src/test/**/build/
+#
+#### STS ###
+#.apt_generated
+#.classpath
+#.factorypath
+#.project
+#.settings
+#.springBeans
+#.sts4-cache
+#bin/
+#!**/src/main/**/bin/
+#!**/src/test/**/bin/
+#
+#### IntelliJ IDEA ###
+#.idea
+#*.iws
+#*.iml
+#*.ipr
+#out/
+#!**/src/main/**/out/
+#!**/src/test/**/out/
+#
+#### NetBeans ###
+#/nbproject/private/
+#/nbbuild/
+#/dist/
+#/nbdist/
+#/.nb-gradle/
+#
+#### VS Code ###
+#.vscode/
+
+# Ignore minio_data and new_db_data directories
+minio_data/
+new_db_data/
+
+# Ignore common Spring Boot build files
+*.class
+*.war
+*.jar
+build/
+target/
+out/
+
+# Gradle
+.gradle/
+build/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Ignore Maven files
+.mvn/
+target/
+
+# Ignore IntelliJ IDEA files
+.idea/
+*.iml
+*.iws
+
+# Ignore Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Logs
+logs/
+*.log
+
+# Ignore Docker-related files if generated
+docker-compose.override.yml

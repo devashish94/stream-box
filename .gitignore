@@ -1,0 +1,50 @@
+# Exclude specific directories
+/minio_data/
+/new_db_data/
+
+# Exclude common Spring Boot build files
+**/*.class
+**/*.war
+**/*.jar
+/build/
+/target/
+/out/
+
+# Gradle
+/.gradle/
+/gradle/
+gradlew
+gradlew.bat
+
+# IDE specific files
+.idea/
+*.iml
+*.iws
+.project
+.classpath
+.settings/
+
+# Maven
+/.mvn/
+/target/
+
+# Node.js dependencies and logs
+/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+/logs/
+*.log
+
+# Docker-related files
+docker-compose.override.yml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore environment variables
+.env
+
